@@ -1,19 +1,10 @@
-var markMass = 95;
-var johnMass = 85;
-var massHeight = 1.88;
-var joinHeight = 1.76;
+var markMass = 78;
+var johnMass = 92;
+var massHeight = 1.69;
+var joinHeight = 1.95;
 
 var markBMI = (markMass/ Math.pow(massHeight,2));
 var joinkBMI = (johnMass/ Math.pow(joinHeight,2));
 
-var markHigherBMI = false;
-console.log("Mark BMI is :" + markBMI);
-console.log("Joihn BMI is :" + joinkBMI);
-
-if(markBMI > joinkBMI){
-    markHigherBMI = true;
-    console.log("Mark has a higher BMI than John");
-}
-else{
-    console.log("John has a higher BMI than Mark");
-}
+var markHigherBMI = markBMI > joinkBMI ? true : false;
+console.log(markHigherBMI);
