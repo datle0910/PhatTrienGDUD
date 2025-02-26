@@ -1,0 +1,47 @@
+.footer{
+    background-color: rgb(41, 40, 40);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.foot-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    gap: 20px; 
+    align-items: stretch;
+}
+.chefify img{
+    height: 40px;
+}
+.about-us input{
+    width: 300px;
+    height: 25px;
+    border-radius: 5px;
+}
+.about-us button{
+    height: 32px;
+    width: 50px;
+    background-color: rgb(194, 63, 124);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.chefify{
+    display: flex;
+    gap: 20px; 
+    align-items: center;
+}
+.learn-more-list{
+    list-style-type: none;
+    line-height: 30px;  
+}
+.shop-list{
+    list-style-type: none;
+    line-height: 30px;
+}
+.Recipes-list{
+    list-style-type: none;
+    line-height: 30px;
+}

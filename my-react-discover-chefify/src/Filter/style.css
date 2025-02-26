@@ -1,0 +1,106 @@
+:root {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .filter {
+    height: 600px;
+    width: 270px;
+    border: 1px solid palevioletred;
+  }
+  
+  .lable-filter {
+    display: flex;
+    align-items: center;
+  }
+  
+  .lable-filter img {
+    height: 20px;
+  }
+  
+  .type {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+  
+  .type-left, .type-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .border {
+    border: 1px solid palevioletred;
+  }
+  
+  .time img {
+    height: 22px;
+  }
+  
+  .mn3050 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .mn3050 .sp1 {
+    padding-left: 50px;
+  }
+  
+  .rating {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .rating div img {
+    height: 18px;
+  }
+  
+  .btn {
+    height: 50px;
+    width: 100%;
+    background-color: palevioletred;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 50px;
+  }
+  
+  .main img {
+    width: 45%;
+  }
+  
+  .list-cakes {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+  }
+  
+  .list-cakes li {
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+  }
+  
+  /* Đặt màu nền khác nhau cho mỗi phần tử */
+  .list-cakes li:nth-child(1) { background-color: pink; color: rgb(248, 131, 150); }
+  .list-cakes li:nth-child(2) { background-color: plum; color: rgb(221, 101, 221); }
+  .list-cakes li:nth-child(3) { background-color: pink; color: rgb(248, 131, 150); }
+  .list-cakes li:nth-child(4) { background-color: rgb(133, 234, 229); color: rgb(57, 199, 192); }
+  
