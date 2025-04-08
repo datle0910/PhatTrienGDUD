@@ -1,4 +1,23 @@
 import { useState } from 'react';
+import logo from '../assets/logo.png';
+import dashboardIcon from '../assets/dashboard.png';
+import folderIcon from '../assets/folder-management.png';
+import team from '../assets/group-chat.png';
+import analytic from '../assets/analytic.png';
+import message from '../assets/message.png';
+import intergation from '../assets/collaborate.png';
+import trynow from '../assets/trynow.png';
+import cart from '../assets/shopping-cart.png';
+import dolas from '../assets/dollar.png';
+import account from '../assets/account.png';
+import search from '../assets/search.png';
+import bell from '../assets/bell.png';
+import help from '../assets/help.png';
+import profile from '../assets/profile.png';
+import pen from '../assets/pen.png';
+import left from '../assets/left.png';
+import next from '../assets/next.png';
+import report from '../assets/report.png';
 
 const Dashboard = () => {
   const [customers, setCustomers] = useState([
@@ -29,8 +48,8 @@ const Dashboard = () => {
       <div className="w-64 bg-white border-r border-gray-200">
         <div className="flex items-center px-6 py-4 border-b">
           <div className="flex items-center">
-            <div className="w-8 h-8 rounded-md flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold">
-              <span>L</span>
+            <div className="w-8 h-8 rounded-md flex items-center justify-center">
+              <img src={logo} alt="" />
             </div>
             <span className="ml-2 font-semibold text-gray-700">Logo</span>
           </div>
@@ -40,37 +59,37 @@ const Dashboard = () => {
           <div className="space-y-1">
             <a href="#" className="flex items-center px-3 py-2 bg-pink-500 text-white rounded-md">
               <span className="mr-3">
-                <img src="/file/BarChart2" alt="Dashboard" />
+                <img src={dashboardIcon} alt="Dashboard" className='w-[20px]' />
               </span>
               <span>Dashboard</span>
             </a>
             <a href="#" className="flex items-center px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-md">
               <span className="mr-3">
-                <img src="/file/FileText" alt="Projects" />
+                <img src={folderIcon} alt="Projects" className='w-[20px]'/>
               </span>
               <span>Projects</span>
             </a>
             <a href="#" className="flex items-center px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-md">
               <span className="mr-3">
-                <img src="/file/Users" alt="Teams" />
+                <img src={team} alt="Teams" className='w-[20px]' />
               </span>
               <span>Teams</span>
             </a>
             <a href="#" className="flex items-center px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-md">
               <span className="mr-3">
-                <img src="/file/BarChart2" alt="Analytics" />
+                <img src={analytic} alt="Analytics" className='w-[20px]'/>
               </span>
               <span>Analytics</span>
             </a>
             <a href="#" className="flex items-center px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-md">
               <span className="mr-3">
-                <img src="/file/MessageSquare" alt="Messages" />
+                <img src={message} alt="Messages" className='w-[20px]'/>
               </span>
               <span>Messages</span>
             </a>
             <a href="#" className="flex items-center px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-md">
               <span className="mr-3">
-                <img src="/file/Layers" alt="Integrations" />
+                <img src={intergation} alt="Integrations" className='w-[20px]'/>
               </span>
               <span>Integrations</span>
             </a>
@@ -80,7 +99,7 @@ const Dashboard = () => {
         <div className="mt-auto px-6 py-4">
           <div className="p-4 bg-blue-50 rounded-lg">
             <div className="mb-3">
-              <img src="/api/placeholder/400/200" alt="Upgrade illustration" className="w-full" />
+              <img src={trynow} alt="Upgrade illustration" className="w-full" />
             </div>
             <h3 className="font-medium text-gray-800">V2.0 is available</h3>
             <div className="mt-3">
@@ -110,17 +129,17 @@ const Dashboard = () => {
                   className="w-64 pl-10 pr-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 />
                 <div className="absolute left-3 top-2.5 text-gray-400">
-                  <img src="/file/Search" alt="Search" />
+                  <img src={search} alt="Search" className='w-[20px]' />
                 </div>
               </div>
               <button className="p-2 rounded-full hover:bg-gray-100">
-                <img src="/file/Bell" alt="Notifications" />
+                <img src={bell} alt="Notifications" className='w-[20px]'/>
               </button>
               <button className="p-2 rounded-full hover:bg-gray-100">
-                <img src="/file/HelpCircle" alt="Help" />
+                <img src={help} alt="Help" className='w-[20px]'/>
               </button>
               <button className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
-                <img src="/file/User" alt="User" />
+                <img src={profile} alt="User" className='w-[20px]' />
               </button>
             </div>
           </div>
@@ -145,7 +164,7 @@ const Dashboard = () => {
                     </div>
                   </div>
                   <button className="p-2 rounded-full text-pink-500 hover:bg-pink-100">
-                    <img src="/file/BarChart2" alt="Bar Chart" />
+                    <img src={cart} alt="Bar Chart" className='w-[20px]' />
                   </button>
                 </div>
               </div>
@@ -162,7 +181,7 @@ const Dashboard = () => {
                     </div>
                   </div>
                   <button className="p-2 rounded-full text-blue-500 hover:bg-blue-100">
-                    <img src="/file/BarChart2" alt="Bar Chart" />
+                    <img src={dolas} alt="Bar Chart" className='w-[20px]' />
                   </button>
                 </div>
               </div>
@@ -179,7 +198,7 @@ const Dashboard = () => {
                     </div>
                   </div>
                   <button className="p-2 rounded-full text-blue-500 hover:bg-blue-100">
-                    <img src="/file/BarChart2" alt="Bar Chart" />
+                    <img src={account} alt="Bar Chart" className='w-[20px]' />
                   </button>
                 </div>
               </div>
@@ -190,7 +209,7 @@ const Dashboard = () => {
               <div className="flex justify-between items-center p-4 border-b border-gray-200">
                 <h3 className="font-medium text-gray-700 flex items-center">
                   <span className="mr-2 text-pink-500">
-                    <img src="/file/BarChart2" alt="Bar Chart" />
+                    <img src={report} alt="Bar Chart" />
                   </span>
                   Detailed report
                 </h3>
@@ -241,7 +260,7 @@ const Dashboard = () => {
                         <td className="px-4 py-4 whitespace-nowrap">
                           <div className="flex items-center">
                             <div className="flex-shrink-0 h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center">
-                              <img src="/file/User" alt="User" />
+                              <img src={profile} alt="User" className='w-[20px]'/>
                             </div>
                             <div className="ml-4">
                               <div className="text-sm font-medium text-gray-900">{customer.name}</div>
@@ -262,7 +281,7 @@ const Dashboard = () => {
                         </td>
                         <td className="px-4 py-4 whitespace-nowrap text-right text-sm font-medium">
                           <button className="text-gray-400 hover:text-gray-900">
-                            <img src="/file/Edit" alt="Edit" />
+                            <img src={pen} alt="Edit" className='w-[20px]' />
                           </button>
                         </td>
                       </tr>
@@ -278,7 +297,7 @@ const Dashboard = () => {
                 </div>
                 <div className="flex space-x-1">
                   <button className="px-2 py-1 rounded-md bg-gray-200 text-gray-700">
-                    <img src="/file/ChevronLeft" alt="Previous" />
+                    <img src={left} alt="Previous" className='w-[20px]'/>
                   </button>
                   <button className="px-3 py-1 rounded-md bg-pink-500 text-white">
                     1
@@ -300,7 +319,7 @@ const Dashboard = () => {
                     11
                   </button>
                   <button className="px-2 py-1 rounded-md hover:bg-gray-100">
-                    <img src="/file/ChevronRight" alt="Next" />
+                    <img src={next} alt="Next" className='w-[20px]'/>
                   </button>
                 </div>
               </div>
