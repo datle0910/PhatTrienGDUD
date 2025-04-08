@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import logo from '../assets/logo.png';
 import dashboardIcon from '../assets/dashboard.png';
 import folderIcon from '../assets/folder-management.png';
@@ -20,14 +20,14 @@ import next from '../assets/next.png';
 import report from '../assets/report.png';
 
 const Dashboard = () => {
-  const [customers, setCustomers] = useState([
-    { id: 1, name: 'Elizabeth Lee', company: 'AvatarSystems', value: '$359', date: '10/07/2023', status: 'New' },
-    { id: 2, name: 'Carlos Garcia', company: 'SmoozeShift', value: '$747', date: '24/07/2023', status: 'New' },
-    { id: 3, name: 'Elizabeth Bailey', company: 'Prime Time Telecom', value: '$564', date: '08/08/2023', status: 'In-progress' },
-    { id: 4, name: 'Ryan Brown', company: 'OmniTech Corporation', value: '$541', date: '31/08/2023', status: 'In-progress' },
-    { id: 5, name: 'Ryan Young', company: 'DataStream Inc.', value: '$769', date: '01/05/2023', status: 'Completed' },
-    { id: 6, name: 'Hailey Adams', company: 'FlowRush', value: '$922', date: '10/06/2023', status: 'Completed' },
-  ]);
+  const [customers, setCustomers] = useState([]);
+
+  useEffect(() => {
+    fetch('https://67c79f2bc19eb8753e7a30c6.mockapi.io/customers')
+      .then(response => response.json())
+      .then(data => setCustomers(data))
+      .catch(error => console.error('Error fetching customers:', error));
+  }, []);
 
   const renderStatus = (status) => {
     switch(status) {
@@ -261,7 +261,7 @@ const Dashboard = () => {
                           <div className="flex items-center">
                             <div className="flex-shrink-0 h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center">
                               <img src={profile} alt="User" className='w-[20px]'/>
-                            </div>
+                            </div>  
                             <div className="ml-4">
                               <div className="text-sm font-medium text-gray-900">{customer.name}</div>
                             </div>
