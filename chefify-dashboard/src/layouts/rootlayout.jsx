@@ -13,6 +13,8 @@ import search from '../assets/search.png';
 import bell from '../assets/bell.png';
 import help from '../assets/help.png';
 import profile from '../assets/profile.png';
+// Use profile icon for users menu item as well
+import userIcon from '../assets/profile.png';
 
 const RootLayout = () => {
   const location = useLocation();
@@ -26,6 +28,7 @@ const RootLayout = () => {
     if (path === '/analytics') return 'Analytics';
     if (path === '/messages') return 'Messages';
     if (path === '/integrations') return 'Integrations';
+    if (path === '/users') return 'Users';
     return 'Dashboard';
   };
 
@@ -123,6 +126,20 @@ const RootLayout = () => {
               </span>
               <span>Integrations</span>
             </NavLink>
+            {/* Add Users link */}
+            <NavLink 
+              to="/users" 
+              className={({ isActive }) => 
+                `grid grid-cols-[auto_1fr] items-center px-3 py-2 rounded-md ${
+                  isActive ? 'bg-pink-500 text-white' : 'text-gray-600 hover:bg-gray-100'
+                }`
+              }
+            >
+              <span className="mr-3">
+                <img src={userIcon} alt="Users" className="w-[20px]"/>
+              </span>
+              <span>Users</span>
+            </NavLink>
           </div>
         </div>
         
@@ -185,14 +202,3 @@ const RootLayout = () => {
 };
 
 export default RootLayout;
-
-
-
-
-
-
-
-
-
-
-

@@ -7,6 +7,7 @@ import Teams from './pages/Teams';
 import Analytics from './pages/Analytics';
 import Messages from './pages/Messages';
 import Integrations from './pages/Integrations';
+import Users from './pages/Users';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="analytics" element={<Analytics />} />
         <Route path="messages" element={<Messages />} />
         <Route path="integrations" element={<Integrations />} />
+        <Route path="users" element={<Users />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>
