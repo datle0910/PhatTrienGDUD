@@ -1,17 +1,14 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import './index.css';
-import App from './toggertheme/App.jsx';
-import { store } from './toggertheme/store.jsx';
-import './toggertheme/styles.css';
 import React from "react";
+import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
+import { store } from "./shoppingcart/store";
+import Cart from "./shoppingcart/Cart"; 
 
 const rootElement = document.getElementById("root");
-const root = createRoot(rootElement);
+const root = ReactDOM.createRoot(rootElement); 
 
 root.render(
   <Provider store={store}>
-    <App />
+    <Cart />
   </Provider>
 );
